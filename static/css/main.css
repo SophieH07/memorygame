@@ -57,3 +57,28 @@ body {
 .hidden {
     background-image: url("/static/cards/hide.png");
 }
+
+.pairs {
+    visibility: hidden;
+}
+
+.win {
+    display: block;
+    font-size: 40px;
+    color: white;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    text-align: center;
+}
+
+.restart {
+    color: purple;
+    text-decoration: underline;
+}
+
+.mouseon {
+    color: lightgreen;
+}
+
+.mouseclicked {
+    color: darkmagenta;
+}
