@@ -45,7 +45,6 @@ function ifWon() {
     let main = document.querySelector('.main');
     let allPairs = document.querySelectorAll('.pairs');
     let allPairList = Array.from(allPairs);
-    console.log(allPairList);
     if (allPairList.length === 12) {
         let win = document.createElement('div');
         win.setAttribute('class', 'win');
