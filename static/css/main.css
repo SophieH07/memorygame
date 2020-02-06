@@ -1,0 +1,59 @@
+body {
+    background-image: url("/static/cards/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.welcome {
+    color: white;
+    font-family: Karumbi;
+    font-size: 70px;
+    text-align: center;
+}
+
+.playing-field {
+    max-width: 1500px;
+    max-height: 900px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.card {
+    background-color: white;
+    background-size: contain;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+
+.csscard {
+    background-image: url("/static/cards/css.gif");
+}
+
+.fire {
+    background-image: url("/static/cards/fire.gif");
+}
+
+.monkey {
+    background-image: url("/static/cards/giphy.gif");
+}
+
+.goat {
+    background-image: url("/static/cards/goat.jpeg");
+}
+
+.sheldon {
+    background-image: url("/static/cards/sheldon.png");
+}
+
+.why {
+    background-image: url("/static/cards/why.jpg");
+}
+
+.hidden {
+    background-image: url("/static/cards/hide.png");
+}
