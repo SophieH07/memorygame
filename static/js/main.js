@@ -49,8 +49,8 @@ function ifWon() {
     if (allPairList.length === 12) {
         let winText = document.createElement('div');
         winText.setAttribute('class', 'win');
-        winText.innerHTML = `<p>You win!</p><div class="restart">Restart</div>
-        <img src="/static/cards/win.gif">`;
+        winText.innerHTML = `<p>You win!</p><div class="restart"><span>Restart</span></div>
+        <img src="/static/cards/win.gif" class="image">`;
         winDiv.appendChild(winText);
     }
     replay();

@@ -75,11 +75,17 @@ body {
 }
 
 .restart {
-    color: purple;
+    color: lightgreen;
+    font-style: italic;
+}
+.restart span:hover {
+    color: powderblue;
     text-decoration: underline;
     cursor: pointer;
 }
-
+.image{
+    border-radius: 10px;
+}
 .mouseon {
     color: lightgreen;
 }
