@@ -2,6 +2,7 @@ body {
     background-image: url("/static/cards/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 
@@ -15,9 +16,10 @@ body {
 .playing-field {
     max-width: 1500px;
     max-height: 900px;
-    margin: auto;
+    margin-left: 4%;
     box-sizing: border-box;
     padding: 10px;
+    display: inline-block;
 }
 
 .card {
@@ -28,7 +30,9 @@ body {
     float: left;
     height: 200px;
     width: 200px;
+    border-radius: 10px;
 }
+
 
 .csscard {
     background-image: url("/static/cards/css.gif");

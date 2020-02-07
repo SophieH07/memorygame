@@ -15,10 +15,8 @@ function hideCards() {
 
 function showCards() {
     let cards = document.querySelectorAll('.card');
-    let clickedCards = 0;
     for (let card of cards) {
-        card.addEventListener('click', function (e) {
-            clickedCards++;
+        card.addEventListener('click', function () {
             card.classList.add('clicked');
             card.classList.remove('hidden');
             setTimeout(gotPair, 500);
@@ -42,33 +40,24 @@ function gotPair() {
 }
 
 function ifWon() {
-    let main = document.querySelector('.main');
+    let winDiv = document.querySelector('.win');
     let allPairs = document.querySelectorAll('.pairs');
     let allPairList = Array.from(allPairs);
     if (allPairList.length === 12) {
-        let win = document.createElement('div');
-        win.setAttribute('class', 'win');
-        win.innerHTML = `<p>You win!</p><div class="restart">Restart</div>
+        let winText = document.createElement('div');
+        winText.setAttribute('class', 'win');
+        winText.innerHTML = `<p>You win!</p><div class="restart">Restart</div>
         <img src="/static/cards/win.gif">`;
-        main.appendChild(win);
+        winDiv.appendChild(winText);
     }
     rePlay();
 }
 
 function rePlay() {
     let restart = document.querySelector('.restart');
-    restart.addEventListener("mouseover", function () {
-        restart.classList.add('mouseon');
-    });
-    restart.addEventListener("mouseout", function () {
-        restart.classList.remove('mouseon');
-    });
     restart.addEventListener("click", function () {
-        restart.classList.add('mouseclicked');
-        randomizedCards();
-        hideCards();
-        showCards();
-    })
+        location.reload();
+    });
 }
 
 randomizedCards();
