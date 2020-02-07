@@ -17,9 +17,12 @@ function showCards() {
     let cards = document.querySelectorAll('.card');
     for (let card of cards) {
         card.addEventListener('click', function () {
-            card.classList.add('clicked');
-            card.classList.remove('hidden');
-            setTimeout(gotPair, 500);
+            let clicked = Array.from(document.querySelectorAll('.clicked'));
+            if(clicked.length < 2){
+                card.classList.add('clicked');
+                card.classList.remove('hidden');
+                setTimeout(gotPair, 500);
+            }
         });
     }
 }
@@ -50,15 +53,16 @@ function ifWon() {
         <img src="/static/cards/win.gif">`;
         winDiv.appendChild(winText);
     }
-    rePlay();
+    replay();
 }
 
-function rePlay() {
+function replay() {
     let restart = document.querySelector('.restart');
     restart.addEventListener("click", function () {
         location.reload();
     });
 }
+
 
 randomizedCards();
 hideCards();
