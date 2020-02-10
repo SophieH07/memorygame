@@ -5,10 +5,9 @@ body {
     background-size: 100% 100%;
 }
 
-
 .welcome {
     color: white;
-    font-family: Karumbi;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
     font-size: 70px;
     text-align: center;
 }
@@ -17,22 +16,49 @@ body {
     max-width: 1500px;
     max-height: 900px;
     margin-left: 4%;
+    margin-right: auto;
     box-sizing: border-box;
     padding: 10px;
     display: inline-block;
 }
 
 .card {
-    background-color: white;
+    background-color: transparent;
     background-size: contain;
     border: 1px solid black;
+    border-radius: 10px;
     box-sizing: border-box;
     float: left;
     height: 200px;
     width: 200px;
-    border-radius: 10px;
 }
 
+.pairs {
+    visibility: hidden;
+}
+
+.win {
+    display: block;
+    font-size: 40px;
+    color: white;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    text-align: center;
+}
+
+.restart {
+    color: lightgreen;
+    font-style: italic;
+}
+
+.restart span:hover {
+    color: powderblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.winner-gif {
+    border-radius: 10px;
+}
 
 .csscard {
     background-image: url("/static/cards/css.gif");
@@ -60,36 +86,4 @@ body {
 
 .hidden {
     background-image: url("/static/cards/hide.png");
-}
-
-.pairs {
-    visibility: hidden;
-}
-
-.win {
-    display: block;
-    font-size: 40px;
-    color: white;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
-    text-align: center;
-}
-
-.restart {
-    color: lightgreen;
-    font-style: italic;
-}
-.restart span:hover {
-    color: powderblue;
-    text-decoration: underline;
-    cursor: pointer;
-}
-.image{
-    border-radius: 10px;
-}
-.mouseon {
-    color: lightgreen;
-}
-
-.mouseclicked {
-    color: darkmagenta;
 }

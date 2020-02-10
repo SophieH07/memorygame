@@ -20,8 +20,8 @@ function showCards() {
             let clicked = Array.from(document.querySelectorAll('.clicked'));
             if(clicked.length < 2){
                 card.classList.add('clicked');
-                card.classList.remove('hidden');
-                setTimeout(gotPair, 500);
+                setTimeout((card.classList.remove('hidden'), 3000));
+                setTimeout(gotPair, 2000);
             }
         });
     }
@@ -50,7 +50,7 @@ function ifWon() {
         let winText = document.createElement('div');
         winText.setAttribute('class', 'win');
         winText.innerHTML = `<p>You win!</p><div class="restart"><span>Restart</span></div>
-        <img src="/static/cards/win.gif" class="image">`;
+        <img src="/static/cards/win.gif" class="winner-gif">`;
         winDiv.appendChild(winText);
     }
     replay();
